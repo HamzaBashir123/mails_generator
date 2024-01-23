@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgba(128, 128, 128, 0.308);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #result {
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid red;
+      }
+      #firstName,
+      #lastName {
+        padding: 5px;
+        border-radius: 10px;
+        margin: 10px;
+        border: none;
+        font-size: 15px;
+      }
+      button {
+        padding: 5px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="firstName">First Name: </label>
+      <input type="text" id="firstName" required />
+      <br />
+      <label for="lastName">Last Name: </label>
+      <input type="text" id="lastName" required />
+      <br />
+      <br />
+      <button onclick="generateEmail()">Generate Email</button>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function generateEmail() {
+        const firstName = document
+          .getElementById("firstName")
+          .value.toLowerCase();
+        const lastName = document
+          .getElementById("lastName")
+          .value.toLowerCase();
+
+        const patterns = [".", "_", "-", ""];
+        const year = [
+          75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91,
+          92, 93, 94, 95,
+        ];
+        const years = [
+          1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985,
+          1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995,
+        ];
+
+        const randomPattern =
+          patterns[Math.floor(Math.random() * patterns.length)];
+        const randomyear = year[Math.floor(Math.random() * year.length)];
+        const randomyears = years[Math.floor(Math.random() * years.length)];
+        console.log(randomPattern);
+        const email = firstName + randomPattern + lastName;
+        const email1 = firstName + lastName + randomyear;
+        const email2 = firstName + lastName + randomyears;
+        const email3 = firstName + randomPattern + lastName + randomyears;
+        const email4 = firstName + randomPattern + lastName + randomyear;
+        const email5 = firstName[0] + randomPattern + lastName;
+        const email6 = firstName[0] + lastName + randomyears;
+        const email7 = firstName[0] + lastName + randomyear;
+        const email8 = firstName[0] + randomPattern + lastName + randomyears;
+        const email9 = firstName[0] + randomPattern + lastName + randomyear;
+
+        const email10 = firstName + randomPattern + lastName[0];
+        const email11 = firstName + lastName[0] + randomyears;
+        const email12 = firstName + lastName[0] + randomyear;
+        const email13 = firstName + randomPattern + lastName[0] + randomyears;
+        const email14 = firstName + randomPattern + lastName[0] + randomyear;
+        document.getElementById(
+          "result"
+        ).innerHTML = `Generated Emails: <br>  ${email} <br> ${email1} <br> ${email2} <br>  ${email3} <br>  ${email4} <br> ${email5} <br> ${email6} <br> ${email7} <br> ${email8} <br> ${email9} <br> ${email10} <br> ${email11} <br> ${email12} <br> ${email13} <br> ${email14} <br> `;
+      }
+    </script>
+  </body>
+</html>
