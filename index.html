@@ -52,10 +52,10 @@
     <script>
       function generateEmail() {
         const firstName = document
-          .getElementById("firstName")
+          .getElementById("firstName").trim()
           .value.toLowerCase();
         const lastName = document
-          .getElementById("lastName")
+          .getElementById("lastName").trim()
           .value.toLowerCase();
 
         const patterns = [".", "_", "-", ""];
