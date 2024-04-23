@@ -19,7 +19,10 @@
         margin-top: 20px;
         padding: 10px;
         border-radius: 10px;
-        /* border: 2px solid red; */
+        display: flex;
+        border: 2px solid red;
+        height: 100%;
+        width: 100%;
       }
       #firstName,
       #lastName {
@@ -34,6 +37,11 @@
         border-radius: 10px;
         cursor: pointer;
       }
+      .colorescheck{
+        background-color: blue;
+        height: 100git ;
+        width: 100px;
+      }
     </style>
   </head>
   <body>
@@ -46,7 +54,12 @@
       <br />
       <br />
       <button onclick="generateEmail()">Generate Email</button>
-      <div id="result"></div>
+      <div id="result">
+        <div class="colorescheck">casd</div>
+        <div class="colorescheck">sa</div>
+        <div class="colorescheck">cas</div>
+        <div class="colorescheck">csa</div>
+      </div>
     </div>
 
     <script>
@@ -107,7 +120,7 @@
 
         document.getElementById(
           "result"
-        ).innerHTML = `Generated Emails: <br>  ${email} <br> ${email1} <br> ${email2} <br>  ${email3} <br>  ${email4} <br> ${email5} <br> ${email6} <br> ${email7} <br> ${email8} <br> ${email9} <br> ${email10} <br> ${email11} <br> ${email12} <br> ${email13} <br> ${email14} <br>  <br> ${email5} <br> ${email16} <br> ${email17} <br> ${email18} <br> ${email19} <br> ${email20} <br> ${email21} <br> ${email22} `;
+        ).innerHTML = `Generated Emails: <br>  ${email} <br> ${email1} <br> ${email2} <br>  ${email3} <br>  ${email4} <br> ${email5} <br> ${email6} <br> ${email7} <br> ${email8} <br> ${email9} <br> ${email10} <br> ${email11} <br> ${email12} <br> ${email13} <br> ${email14} <br> gi ${email5} <br> ${email16} <br> ${email17} <br> ${email18} <br> ${email19} <br> ${email20} <br> ${email21} <br> ${email22} `;
       }
     </script>
   </body>
