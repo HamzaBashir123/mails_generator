@@ -12,7 +12,9 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        margin: 0;
+        /* width: 98vw; */
+        overflow: hidden;
+        /* border: 2px solid red; */
       }
       #result {
         font-size: 18px;
@@ -21,44 +23,58 @@
         border-radius: 10px;
         display: flex;
         border: 2px solid red;
-        height: 100%;
-        width: 100%;
+        width: 90vw;
+        height: 400px;
       }
       #firstName,
       #lastName {
-        padding: 5px;
-        border-radius: 10px;
+        padding: 10px;
+        font-size: large;
+        border-radius: 20px;
         margin: 10px;
         border: none;
         font-size: 15px;
       }
       button {
-        padding: 5px 10px;
-        border-radius: 10px;
+        padding:  10px;
+        border-radius: 20px;
         cursor: pointer;
+        background-color: white;
+        box-shadow: 3px 3px 5px grey;
       }
-      .colorescheck{
+      .colorescheck {
         background-color: blue;
-        height: 100git ;
+        height: 100git;
         width: 100px;
+      }
+      .bodddyy{
+        /* border: 2px solid red; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
       }
     </style>
   </head>
   <body>
-    <div>
-      <label for="firstName">First Name: </label>
-      <input type="text" id="firstName" required />
-      <br />
-      <label for="lastName">Last Name: </label>
-      <input type="text" id="lastName" required />
-      <br />
-      <br />
-      <button onclick="generateEmail()">Generate Email</button>
+    <div class="main">
+      <div class="bodddyy">
+  
+        <label for="firstName">First Name: </label>
+        <input type="text" id="firstName" required />
+        <br />
+        <label for="lastName">Last Name: </label>
+        <input type="text" id="lastName" required />
+
+        
+        <button onclick="generateEmail()">Generate Email</button>
+      </div>
       <div id="result">
-        <div class="colorescheck">casd</div>
-        <div class="colorescheck">sa</div>
-        <div class="colorescheck">cas</div>
-        <div class="colorescheck">csa</div>
+        <div class="colorescheck">01</div>
+        <div class="colorescheck">02</div>
+        <div class="colorescheck">03</div>
+        <div class="colorescheck">04</div>
       </div>
     </div>
 
@@ -95,7 +111,6 @@
         const email3 = firstName + randomPattern + lastName + randomyears;
         const email4 = firstName + randomPattern + lastName + randomyear;
 
-        
         const email5 = firstName[0] + randomPattern + lastName;
         const email6 = firstName[0] + lastName + randomyears;
         const email7 = firstName[0] + lastName + randomyear;
